@@ -15,6 +15,8 @@ target 'TikiTool' do
      pod 'Moya/RxSwift'
      pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
      pod 'RxCocoa'
+     pod 'Luminous'
+     pod 'HGCircularSlider', '~> 1.0.3'
      use_frameworks! //
 
 

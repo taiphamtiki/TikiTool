@@ -9,29 +9,24 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import ObservableArray_RxSwift
 import Firebase
 class BoxViewModel {
-    var boxs = ObservableArray<BoxItem>()
-    var segmentObsever : Observable <Int>!
-    
-    init(listBoxObsever :Observable <Int> ) {
-        self.segmentObsever = listBoxObsever
+    var segmentObsever : Observable<[BoxItem]>!
+    var boxs = [BoxItem]()
+    init() {
+        setup()
     }
     
-    func lastListBox() -> Observable <[BoxItem]> {
-        return segmentObsever
-            .observeOn(MainScheduler.instance)
-            .flatMapLatest{selectedSegmentIndex-> Observable<[BoxItem]> in
-                print(selectedSegmentIndex)
-                return self.createListBoxObssever()
-            }
-        
+    func setup()
+    {
+        self.segmentObsever = createListBoxObssever()
+
     }
-   private func createListBoxObssever() -> Observable<[BoxItem]> {
+        func createListBoxObssever() -> Observable<[BoxItem]> {
         return Observable.create { observer in
             APIManager.shareInstance.getListBox(onCompletion: { (listBox) in
                 observer.onNext(listBox)
+                self.boxs = listBox
                 observer.onCompleted()
             })
             return Disposables.create()

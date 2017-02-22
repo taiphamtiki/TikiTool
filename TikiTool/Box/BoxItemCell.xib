@@ -14,14 +14,14 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoxItemCell" rowHeight="65" id="X8m-8U-Cth" customClass="BoxItemCell" customModule="TikiTool" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="418" height="65"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X8m-8U-Cth" id="SBJ-8d-URm">
-                <rect key="frame" x="0.0" y="0.0" width="418" height="64.5"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X8m-8U-Cth" id="SBJ-8d-URm">
+                <rect key="frame" x="0.0" y="0.0" width="418" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOX 60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vi-lh-Ipm">
-                        <rect key="frame" x="8" y="24" width="50" height="17"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="12" y="24" width="48.5" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3D-oJ-7C7" customClass="FaveButton" customModule="FaveButton">
@@ -53,13 +53,15 @@
                         </userDefinedRuntimeAttributes>
                     </button>
                 </subviews>
+                <color key="backgroundColor" red="0.086274509803921567" green="0.10980392156862745" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="y3D-oJ-7C7" secondAttribute="trailing" constant="8" id="ZFx-3z-EuV"/>
-                    <constraint firstItem="3vi-lh-Ipm" firstAttribute="leading" secondItem="SBJ-8d-URm" secondAttribute="leading" constant="8" id="cUJ-2V-z4d"/>
+                    <constraint firstItem="3vi-lh-Ipm" firstAttribute="leading" secondItem="SBJ-8d-URm" secondAttribute="leading" constant="12" id="cUJ-2V-z4d"/>
                     <constraint firstItem="3vi-lh-Ipm" firstAttribute="centerY" secondItem="SBJ-8d-URm" secondAttribute="centerY" id="hd5-o3-jqv"/>
                     <constraint firstItem="y3D-oJ-7C7" firstAttribute="centerY" secondItem="SBJ-8d-URm" secondAttribute="centerY" id="tK4-T6-7Y0"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.086274509799999996" green="0.10980392160000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="boxNameTitle" destination="3vi-lh-Ipm" id="weZ-yW-0sP"/>
                 <outlet property="favoritesBtn" destination="y3D-oJ-7C7" id="Kt1-Wv-htD"/>

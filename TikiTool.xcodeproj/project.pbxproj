@@ -10,6 +10,7 @@
 		5D4C706039C55C15A45F4610 /* Pods_TikiTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16B242D32254EF3BA5372BA /* Pods_TikiTool.framework */; };
 		8B09760AFC0FB858563CD916 /* Pods_TikiToolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A665C6F7209B485A6DBAD61 /* Pods_TikiToolUITests.framework */; };
 		921F13F995C7DBED843035A0 /* Pods_TikiToolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2080121748405F0C1243BA6C /* Pods_TikiToolTests.framework */; };
+		EE0BCC5B1E543A1300AC08ED /* DiskSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0BCC5A1E543A1300AC08ED /* DiskSpaceViewController.swift */; };
 		EE11DDD21E4C13F600AB6F39 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11DDD11E4C13F600AB6F39 /* FirebaseManager.swift */; };
 		EE1D81511E4969B500A61155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D81501E4969B500A61155 /* AppDelegate.swift */; };
 		EE1D81561E4969B500A61155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1D81541E4969B500A61155 /* Main.storyboard */; };
@@ -22,8 +23,10 @@
 		EE1D818E1E49812A00A61155 /* BoxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D818D1E49812A00A61155 /* BoxItem.swift */; };
 		EE1D81921E498B8100A61155 /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D81911E498B8100A61155 /* BoxViewController.swift */; };
 		EE1D81941E498CCE00A61155 /* BoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D81931E498CCE00A61155 /* BoxViewModel.swift */; };
+		EE8BE0A41E5BF4FE00DB3CA1 /* ToolTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BE0A31E5BF4FE00DB3CA1 /* ToolTabBarViewController.swift */; };
 		EEB9385E1E4ABAE10030EFE7 /* BoxItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9385D1E4ABAE10030EFE7 /* BoxItemCell.swift */; };
 		EEB938601E4ABD4F0030EFE7 /* BoxItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB9385F1E4ABD4F0030EFE7 /* BoxItemCell.xib */; };
+		EEE28C501E5D3501000192BF /* WaveLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE28C4D1E5D3501000192BF /* WaveLoadingIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,7 @@
 		D16B242D32254EF3BA5372BA /* Pods_TikiTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikiTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68F95B60EC3C187066ED9BC /* Pods-TikiTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-TikiTool/Pods-TikiTool.release.xcconfig"; sourceTree = "<group>"; };
 		DECA501039452FC91E6827EF /* Pods-TikiToolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiToolUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TikiToolUITests/Pods-TikiToolUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE0BCC5A1E543A1300AC08ED /* DiskSpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskSpaceViewController.swift; sourceTree = "<group>"; };
 		EE11DDD11E4C13F600AB6F39 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		EE1D814D1E4969B500A61155 /* TikiTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikiTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1D81501E4969B500A61155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +74,10 @@
 		EE1D818D1E49812A00A61155 /* BoxItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxItem.swift; sourceTree = "<group>"; };
 		EE1D81911E498B8100A61155 /* BoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxViewController.swift; sourceTree = "<group>"; };
 		EE1D81931E498CCE00A61155 /* BoxViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxViewModel.swift; sourceTree = "<group>"; };
+		EE8BE0A31E5BF4FE00DB3CA1 /* ToolTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolTabBarViewController.swift; sourceTree = "<group>"; };
 		EEB9385D1E4ABAE10030EFE7 /* BoxItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxItemCell.swift; sourceTree = "<group>"; };
 		EEB9385F1E4ABD4F0030EFE7 /* BoxItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxItemCell.xib; sourceTree = "<group>"; };
+		EEE28C4D1E5D3501000192BF /* WaveLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveLoadingIndicator.swift; sourceTree = "<group>"; };
 		FFF7266F733E67B2A34E26AA /* Pods-TikiTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TikiTool/Pods-TikiTool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,10 +132,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		EE1D81441E4969B500A61155 = {
+		EE0BCC581E5439C000AC08ED /* New Group */ = {
 			isa = PBXGroup;
 			children = (
 				EE1D814F1E4969B500A61155 /* TikiTool */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		EE0BCC591E5439FF00AC08ED /* DiskSpace */ = {
+			isa = PBXGroup;
+			children = (
+				EE0BCC5A1E543A1300AC08ED /* DiskSpaceViewController.swift */,
+			);
+			path = DiskSpace;
+			sourceTree = "<group>";
+		};
+		EE1D81441E4969B500A61155 = {
+			isa = PBXGroup;
+			children = (
+				EE0BCC581E5439C000AC08ED /* New Group */,
 				EE1D81671E4969B500A61155 /* TikiToolTests */,
 				EE1D81721E4969B600A61155 /* TikiToolUITests */,
 				EE1D814E1E4969B500A61155 /* Products */,
@@ -151,6 +173,8 @@
 		EE1D814F1E4969B500A61155 /* TikiTool */ = {
 			isa = PBXGroup;
 			children = (
+				EEE28C4A1E5D3501000192BF /* Classes */,
+				EE0BCC591E5439FF00AC08ED /* DiskSpace */,
 				EE1D81841E496D2700A61155 /* Box */,
 				EE1D81861E496D2700A61155 /* Manager */,
 				EE1D81501E4969B500A61155 /* AppDelegate.swift */,
@@ -159,6 +183,7 @@
 				EE1D815C1E4969B500A61155 /* LaunchScreen.storyboard */,
 				EE1D815F1E4969B500A61155 /* Info.plist */,
 				EE1D81571E4969B500A61155 /* TikiTool.xcdatamodeld */,
+				EE8BE0A31E5BF4FE00DB3CA1 /* ToolTabBarViewController.swift */,
 			);
 			path = TikiTool;
 			sourceTree = "<group>";
@@ -200,6 +225,14 @@
 				EE11DDD11E4C13F600AB6F39 /* FirebaseManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEE28C4A1E5D3501000192BF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EEE28C4D1E5D3501000192BF /* WaveLoadingIndicator.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +312,7 @@
 				TargetAttributes = {
 					EE1D814C1E4969B500A61155 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T67GE44MRY;
 						ProvisioningStyle = Automatic;
 					};
 					EE1D81631E4969B500A61155 = {
@@ -484,14 +518,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8BE0A41E5BF4FE00DB3CA1 /* ToolTabBarViewController.swift in Sources */,
 				EEB9385E1E4ABAE10030EFE7 /* BoxItemCell.swift in Sources */,
 				EE1D81941E498CCE00A61155 /* BoxViewModel.swift in Sources */,
 				EE11DDD21E4C13F600AB6F39 /* FirebaseManager.swift in Sources */,
 				EE1D81921E498B8100A61155 /* BoxViewController.swift in Sources */,
 				EE1D818E1E49812A00A61155 /* BoxItem.swift in Sources */,
+				EE0BCC5B1E543A1300AC08ED /* DiskSpaceViewController.swift in Sources */,
 				EE1D818A1E4977A000A61155 /* APIManager.swift in Sources */,
 				EE1D81511E4969B500A61155 /* AppDelegate.swift in Sources */,
 				EE1D81591E4969B500A61155 /* TikiTool.xcdatamodeld in Sources */,
+				EEE28C501E5D3501000192BF /* WaveLoadingIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,7 +681,10 @@
 			baseConfigurationReference = FFF7266F733E67B2A34E26AA /* Pods-TikiTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = T67GE44MRY;
 				INFOPLIST_FILE = TikiTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvtai.TikiTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -657,7 +697,10 @@
 			baseConfigurationReference = D68F95B60EC3C187066ED9BC /* Pods-TikiTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = T67GE44MRY;
 				INFOPLIST_FILE = TikiTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvtai.TikiTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
