@@ -24,9 +24,15 @@
 		EE1D81921E498B8100A61155 /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D81911E498B8100A61155 /* BoxViewController.swift */; };
 		EE1D81941E498CCE00A61155 /* BoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D81931E498CCE00A61155 /* BoxViewModel.swift */; };
 		EE8BE0A41E5BF4FE00DB3CA1 /* ToolTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BE0A31E5BF4FE00DB3CA1 /* ToolTabBarViewController.swift */; };
+		EEA374941E647271001377EC /* DeeplinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA374931E647271001377EC /* DeeplinkViewController.swift */; };
+		EEA374961E647AB0001377EC /* DeeplinkViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA374951E647AB0001377EC /* DeeplinkViewModal.swift */; };
+		EEA374981E648618001377EC /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA374971E648618001377EC /* CoreDataHelper.swift */; };
 		EEB9385E1E4ABAE10030EFE7 /* BoxItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9385D1E4ABAE10030EFE7 /* BoxItemCell.swift */; };
 		EEB938601E4ABD4F0030EFE7 /* BoxItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB9385F1E4ABD4F0030EFE7 /* BoxItemCell.xib */; };
 		EEE28C501E5D3501000192BF /* WaveLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE28C4D1E5D3501000192BF /* WaveLoadingIndicator.swift */; };
+		EEE2DC831E650F890051881A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE2DC821E650F890051881A /* GoogleService-Info.plist */; };
+		EEE2DC851E65103C0051881A /* LoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2DC841E65103C0051881A /* LoveViewController.swift */; };
+		EEE2DC871E6510E70051881A /* LoveViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2DC861E6510E70051881A /* LoveViewModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +81,15 @@
 		EE1D81911E498B8100A61155 /* BoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxViewController.swift; sourceTree = "<group>"; };
 		EE1D81931E498CCE00A61155 /* BoxViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxViewModel.swift; sourceTree = "<group>"; };
 		EE8BE0A31E5BF4FE00DB3CA1 /* ToolTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolTabBarViewController.swift; sourceTree = "<group>"; };
+		EEA374931E647271001377EC /* DeeplinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeeplinkViewController.swift; sourceTree = "<group>"; };
+		EEA374951E647AB0001377EC /* DeeplinkViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeeplinkViewModal.swift; sourceTree = "<group>"; };
+		EEA374971E648618001377EC /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		EEB9385D1E4ABAE10030EFE7 /* BoxItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxItemCell.swift; sourceTree = "<group>"; };
 		EEB9385F1E4ABD4F0030EFE7 /* BoxItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxItemCell.xib; sourceTree = "<group>"; };
 		EEE28C4D1E5D3501000192BF /* WaveLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveLoadingIndicator.swift; sourceTree = "<group>"; };
+		EEE2DC821E650F890051881A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EEE2DC841E65103C0051881A /* LoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoveViewController.swift; sourceTree = "<group>"; };
+		EEE2DC861E6510E70051881A /* LoveViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoveViewModal.swift; sourceTree = "<group>"; };
 		FFF7266F733E67B2A34E26AA /* Pods-TikiTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TikiTool/Pods-TikiTool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +195,7 @@
 				EE1D815C1E4969B500A61155 /* LaunchScreen.storyboard */,
 				EE1D815F1E4969B500A61155 /* Info.plist */,
 				EE1D81571E4969B500A61155 /* TikiTool.xcdatamodeld */,
+				EEE2DC821E650F890051881A /* GoogleService-Info.plist */,
 				EE8BE0A31E5BF4FE00DB3CA1 /* ToolTabBarViewController.swift */,
 			);
 			path = TikiTool;
@@ -214,6 +227,10 @@
 				EE1D81931E498CCE00A61155 /* BoxViewModel.swift */,
 				EEB9385D1E4ABAE10030EFE7 /* BoxItemCell.swift */,
 				EEB9385F1E4ABD4F0030EFE7 /* BoxItemCell.xib */,
+				EEA374931E647271001377EC /* DeeplinkViewController.swift */,
+				EEA374951E647AB0001377EC /* DeeplinkViewModal.swift */,
+				EEE2DC841E65103C0051881A /* LoveViewController.swift */,
+				EEE2DC861E6510E70051881A /* LoveViewModal.swift */,
 			);
 			path = Box;
 			sourceTree = "<group>";
@@ -223,6 +240,7 @@
 			children = (
 				EE1D81891E4977A000A61155 /* APIManager.swift */,
 				EE11DDD11E4C13F600AB6F39 /* FirebaseManager.swift */,
+				EEA374971E648618001377EC /* CoreDataHelper.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -354,6 +372,7 @@
 			files = (
 				EEB938601E4ABD4F0030EFE7 /* BoxItemCell.xib in Resources */,
 				EE1D815E1E4969B500A61155 /* LaunchScreen.storyboard in Resources */,
+				EEE2DC831E650F890051881A /* GoogleService-Info.plist in Resources */,
 				EE1D815B1E4969B500A61155 /* Assets.xcassets in Resources */,
 				EE1D81561E4969B500A61155 /* Main.storyboard in Resources */,
 			);
@@ -528,7 +547,12 @@
 				EE1D818A1E4977A000A61155 /* APIManager.swift in Sources */,
 				EE1D81511E4969B500A61155 /* AppDelegate.swift in Sources */,
 				EE1D81591E4969B500A61155 /* TikiTool.xcdatamodeld in Sources */,
+				EEA374981E648618001377EC /* CoreDataHelper.swift in Sources */,
+				EEA374941E647271001377EC /* DeeplinkViewController.swift in Sources */,
+				EEE2DC871E6510E70051881A /* LoveViewModal.swift in Sources */,
 				EEE28C501E5D3501000192BF /* WaveLoadingIndicator.swift in Sources */,
+				EEA374961E647AB0001377EC /* DeeplinkViewModal.swift in Sources */,
+				EEE2DC851E65103C0051881A /* LoveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

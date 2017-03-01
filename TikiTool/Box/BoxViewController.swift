@@ -13,7 +13,7 @@ import GDPerformanceView_Swift
 import TTSegmentedControl
 import RxCocoa
 import RxSwift
-class BoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSource  {
+class BoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,BoxItemCellDelegate  {
     @IBOutlet weak var boxTableView: UITableView!
     @IBOutlet weak var segmentType: UISegmentedControl!
     var boxViewModel = BoxViewModel()
@@ -28,9 +28,6 @@ class BoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         self.boxTableView.register(UINib.init(nibName: "BoxItemCell", bundle: Bundle.main), forCellReuseIdentifier:  "BoxItemCell")
-//        self.navigationController?.navigationBar.isTranslucent = false
-//        self.navigationController?.navigationBar.barTintColor = UIColor.init(colorLiteralRed: 22/255.0, green: 28/255.0, blue: 37/255.0, alpha: 1)
-//        self.boxTableView.backgroundColor = UIColor.init(colorLiteralRed: 22/255.0, green: 28/255.0, blue: 37/255.0, alpha: 1)
         self.boxViewModel.createListBoxObssever().subscribe(onCompleted: {
             self.boxTableView.reloadData()
         }).addDisposableTo(DisposeBag())
@@ -51,7 +48,7 @@ class BoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         let cell : BoxItemCell = tableView.dequeueReusableCell(withIdentifier: "BoxItemCell", for: indexPath) as! BoxItemCell
         
        cell.boxNameTitle.text = box.name
-       
+       cell.delegate = self
         return cell
     }
     
@@ -74,4 +71,11 @@ class BoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         
     }
 // MARK - UISegmentControl
+    func didClickItem(box: BoxItemCell) {
+        let indexCell = self.boxTableView.indexPath(for: box)
+        let itemBox = self.boxViewModel.boxs[(indexCell?.row)!]
+        let coreDataHelper = CoreDataHelper()
+        coreDataHelper.Save(box: itemBox)
+        print(indexCell)
+    }
 }

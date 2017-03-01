@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>531399427936-uqvd57qjs9ljiaisebpvmn4sq89h5v0i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.531399427936-uqvd57qjs9ljiaisebpvmn4sq89h5v0i</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC2rfdjfD3qxOPTLn44F2VRnt3Lu2XLKf4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>531399427936</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>vn.tiki.app.Tiki</string>
+	<key>PROJECT_ID</key>
+	<string>tikiandroid-1047</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tikiandroid-1047.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:531399427936:ios:d5e38b6736d1deb6</string>
+	<key>DATABASE_URL</key>
+	<string>https://tikiandroid-1047.firebaseio.com</string>
+</dict>
+</plist>

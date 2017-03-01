@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import ChameleonFramework
-
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.init(colorLiteralRed: 22/255.0, green: 28/255.0, blue: 37/255.0, alpha: 1)
 //
         UINavigationBar.appearance().isTranslucent = false
+        FIRApp.configure()
 
         UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
 

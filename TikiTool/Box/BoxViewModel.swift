@@ -22,35 +22,18 @@ class BoxViewModel {
         self.segmentObsever = createListBoxObssever()
 
     }
-        func createListBoxObssever() -> Observable<[BoxItem]> {
-        return Observable.create { observer in
-            APIManager.shareInstance.getListBox(onCompletion: { (listBox) in
-                observer.onNext(listBox)
-                self.boxs = listBox
-                observer.onCompleted()
-            })
-            return Disposables.create()
-        }
-      }
-    
-//    public func getDeeplink() {
-//        
-//            FirebaseManager.shareInsstance.getDeepLink({ (snapshot) in
-//                self.boxs = [BoxItem]()
-//                
-//                if snapshot.value == nil {
-//                    return
-//                }
-//                
-//                for value in snapshot.children {
-//                    let child = value as! FIRDataSnapshot
-//                    let dict = child.value as! NSDictionary
-//                    let deeplink = BoxItem(name: dict["title"] as! String, link: dict["link"] as! String, false)
-//                    self.boxs += [deeplink]
-//                }
-//            })
-//        }
+
+    func createListBoxObssever() -> Observable<[BoxItem]> {
+    return Observable.create { observer in
+        APIManager.shareInstance.getListBox(onCompletion: { (listBox) in
+            observer.onNext(listBox)
+            self.boxs = listBox
+            observer.onCompleted()
+        })
+        return Disposables.create()
     }
+  }
+}
     
     
 
