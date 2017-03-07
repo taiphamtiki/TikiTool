@@ -44,7 +44,7 @@ class LoveViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let box = self.loveViewModel.boxs[indexPath.row]
         let cell : BoxItemCell = tableView.dequeueReusableCell(withIdentifier: "BoxItemCell", for: indexPath) as! BoxItemCell
-        
+        cell.favoritesBtn.isHidden = true
         cell.boxNameTitle.text = box.name
         
         return cell

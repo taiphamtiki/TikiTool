@@ -50,7 +50,6 @@ class BoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
        cell.boxNameTitle.text = box.name
         let isHasSave = CoreDataHelper.shareInsstance.checkDeppLink(box: box)
         cell.favoritesBtn.isSelected = isHasSave
-
        cell.delegate = self
         return cell
     }
