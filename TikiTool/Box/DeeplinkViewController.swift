@@ -16,16 +16,20 @@ import RxSwift
 
 class DeeplinkViewController:UIViewController,UITableViewDelegate,UITableViewDataSource  {
     var deepLinkViewModel = DeeplinkViewModal()
+    let disposeBag = DisposeBag()
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         self.tableView.register(UINib.init(nibName: "BoxItemCell", bundle: Bundle.main), forCellReuseIdentifier:  "BoxItemCell")
-        self.deepLinkViewModel.createListDeepLinkObssever().subscribe(onCompleted: {
+        self.tableView.tableFooterView = UIView()
+        self.deepLinkViewModel.segmentObsever.subscribe(onNext: { (listBox) in
             self.tableView.reloadData()
-        }).addDisposableTo(DisposeBag())
+        }).addDisposableTo(disposeBag);
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+    }
     // MARK: - TableviewDataSourcess
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -40,6 +44,8 @@ class DeeplinkViewController:UIViewController,UITableViewDelegate,UITableViewDat
         let cell : BoxItemCell = tableView.dequeueReusableCell(withIdentifier: "BoxItemCell", for: indexPath) as! BoxItemCell
         
         cell.boxNameTitle.text = box.name
+        let isHasSave = CoreDataHelper.shareInsstance.checkDeppLink(box: box)
+        cell.favoritesBtn.isSelected = isHasSave
         
         return cell
     }

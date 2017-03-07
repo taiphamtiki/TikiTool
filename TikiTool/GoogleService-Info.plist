@@ -2,24 +2,28 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>531399427936-uqvd57qjs9ljiaisebpvmn4sq89h5v0i.apps.googleusercontent.com</string>
+	<string>206442919818-63eiptr4fmckjottc30iabukb2p499e0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.531399427936-uqvd57qjs9ljiaisebpvmn4sq89h5v0i</string>
+	<string>com.googleusercontent.apps.206442919818-63eiptr4fmckjottc30iabukb2p499e0</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC2rfdjfD3qxOPTLn44F2VRnt3Lu2XLKf4</string>
+	<string>AIzaSyCD_XJ-C2r_GCuTFXfygWhpTP2fRB7oXe0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>531399427936</string>
+	<string>206442919818</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>vn.tiki.app.Tiki</string>
+	<string>com.tuyenmonkey.TikiTala</string>
 	<key>PROJECT_ID</key>
-	<string>tikiandroid-1047</string>
+	<string>tiki-tala-afa00</string>
 	<key>STORAGE_BUCKET</key>
-	<string>tikiandroid-1047.appspot.com</string>
+	<string>tiki-tala-afa00.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
@@ -29,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:531399427936:ios:d5e38b6736d1deb6</string>
+	<string>1:206442919818:ios:a34f133470acc1e5</string>
 	<key>DATABASE_URL</key>
-	<string>https://tikiandroid-1047.firebaseio.com</string>
+	<string>https://tiki-tala-afa00.firebaseio.com</string>
 </dict>
 </plist>

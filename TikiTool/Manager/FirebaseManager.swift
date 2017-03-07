@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 class FirebaseManager: NSObject {
     static let shareInsstance = FirebaseManager()
-    let deeplinkReef = FIRDatabase.database().reference().child("deeplink")
+    let deeplinkReef = FIRDatabase.database().reference().child("deeplinks")
     func getDeepLink(_ onCompletion:@escaping ([BoxItem]) -> Void) {
         deeplinkReef.observe(FIRDataEventType.value, with: { snapshot in
             if snapshot.value == nil {

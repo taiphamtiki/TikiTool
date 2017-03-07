@@ -10,12 +10,13 @@ import Foundation
 import CoreData
 import UIKit
 class CoreDataHelper {
-    
-    func Save(box: BoxItem) -> Bool {
+    static let shareInsstance = CoreDataHelper()
+
+    func Save(box: BoxItem)  {
         
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
-                return false
+                return 
         }
         
         let managedContext =
@@ -32,10 +33,8 @@ class CoreDataHelper {
 
         do {
             try managedContext.save()
-            return true
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
-            return false
         }
     }
     
@@ -87,5 +86,32 @@ class CoreDataHelper {
         } catch  {
             
         }
+    }
+    func checkDeppLink(box: BoxItem) -> Bool {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return false
+        }
+        
+        do {
+            let managedContext =
+                appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "DeepLink")
+            fetchRequest.fetchLimit = 1
+            fetchRequest.predicate = NSPredicate(format: "name == %@ AND link == %@", box.name,box.link)
+            
+            var objects: [NSManagedObject]
+            try  objects = managedContext.fetch(fetchRequest)  as! [NSManagedObject]
+            if objects.count > 0 {
+                return true
+            }
+            try managedContext.save()
+        } catch  {
+            return false
+        }
+
+
+        
+        return false
     }
 }

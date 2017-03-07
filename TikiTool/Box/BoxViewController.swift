@@ -48,6 +48,9 @@ class BoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         let cell : BoxItemCell = tableView.dequeueReusableCell(withIdentifier: "BoxItemCell", for: indexPath) as! BoxItemCell
         
        cell.boxNameTitle.text = box.name
+        let isHasSave = CoreDataHelper.shareInsstance.checkDeppLink(box: box)
+        cell.favoritesBtn.isSelected = isHasSave
+
        cell.delegate = self
         return cell
     }
@@ -75,7 +78,13 @@ class BoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         let indexCell = self.boxTableView.indexPath(for: box)
         let itemBox = self.boxViewModel.boxs[(indexCell?.row)!]
         let coreDataHelper = CoreDataHelper()
-        coreDataHelper.Save(box: itemBox)
+        let isHasSave = CoreDataHelper.shareInsstance.checkDeppLink(box: itemBox)
+        if isHasSave == false {
+            coreDataHelper.Save(box: itemBox)
+        }
+        else {
+            coreDataHelper.removeDeepLink(box: itemBox)
+        }
         print(indexCell)
     }
 }
