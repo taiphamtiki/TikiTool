@@ -8,7 +8,7 @@
 
 //正弦函数公式  y = amplitude * sin((2 * π / term) * x +- phasePosition)
 import UIKit
-
+import QuartzCore
 
 let π = M_PI
 
@@ -43,6 +43,11 @@ class WaveLoadingIndicator: UIView {
     fileprivate let progressTextFontSize: CGFloat = 18.0
     
     fileprivate var waving: Bool = true
+    var progressReload : Double  = 0.0 {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
     
     
     class var amplitudeMin: Double {
@@ -57,6 +62,9 @@ class WaveLoadingIndicator: UIView {
             self.setNeedsDisplay()
         }
     }
+    
+    
+    
     
     var waveAmplitude: Double {
         get { return amplitude }
@@ -112,11 +120,12 @@ class WaveLoadingIndicator: UIView {
         
         //Let clipCircle above the waves
         clipWithCircle()
-        
         //draw the tip text of progress
         if isShowProgressText {
             drawProgressText()
         }
+
+        clipWithCircle(color: UIColor.red,progress:self.progressReload)
     }
     
     override func layoutSubviews() {
@@ -150,6 +159,27 @@ class WaveLoadingIndicator: UIView {
         clipPath.addClip()
     }
     
+    func clipWithCircle(color: UIColor,progress: Double) {
+        let circleRectWidth = min(self.bounds.size.width, self.bounds.size.height) - 2 * clipCircleLineWidth
+        let circleRectOriginX = (self.bounds.size.width - circleRectWidth) / 2
+        let circleRectOriginY = (self.bounds.size.height - circleRectWidth) / 2
+        let circleRect = CGRect(x: circleRectOriginX, y: circleRectOriginY, width: circleRectWidth, height: circleRectWidth)
+        
+        var clipPath: UIBezierPath!
+        if shapeModel == .shapeModelCircle {
+            let endAngle = CGFloat(M_PI + (progress * 2 * M_PI) + M_PI / 2  )
+            clipPath = UIBezierPath.init(arcCenter: CGPoint(x : circleRect.midX, y : circleRect.midY), radius: circleRect.width / 2, startAngle: CGFloat(M_PI + M_PI / 2), endAngle:endAngle, clockwise: true)
+        } else if shapeModel == .shapeModelRect {
+            clipPath = UIBezierPath(rect: circleRect)
+        }
+        
+        color.setStroke()
+        UIColor.clear.setFill()
+        clipPath.lineWidth = clipCircleLineWidth
+        clipPath.stroke()
+        clipPath.addClip()
+    }
+    
     
     func drawWaveWater(_ originX: Double, fillColor: UIColor) {
         let curvePath = UIBezierPath()
@@ -170,7 +200,9 @@ class WaveLoadingIndicator: UIView {
         fillColor.setFill()
         curvePath.lineWidth = 10
         curvePath.fill()
-    }
+        
+        
+        }
     
     
     func drawProgressText() {

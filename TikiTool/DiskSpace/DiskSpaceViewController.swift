@@ -13,7 +13,9 @@ class DiskSpaceViewController: UIViewController {
     var totalDiskSpace : Int?
     @IBOutlet weak var parentIndicator: UIView!
     @IBOutlet weak var infoDiskLable: UILabel!
-    
+    var timer : Timer?
+    let maxTime = 15.0
+    var timeCount = 0.0
     var currentDiskSpace : Int?
     let waveLoadingIndicator: WaveLoadingIndicator = WaveLoadingIndicator(frame: CGRect.zero)
 
@@ -29,6 +31,25 @@ class DiskSpaceViewController: UIViewController {
         self.infoDiskLable.text = String("\(Luminous.System.Disk.usedSpace)/" + "\(Luminous.System.Disk.totalSpace)")
     }
     
+    @IBAction func actionClear(_ sender: Any) {
+        self.freeDisk(sender)
+       timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(actionTime), userInfo: nil, repeats: true)
+
+    }
+    func actionTime() {
+        if (self.waveLoadingIndicator.progressReload <= 1){
+            self.timeCount += 1.0
+            let percent = (Double(self.timeCount) / maxTime)
+            self.waveLoadingIndicator.progressReload = percent
+            print("My percent \(percent)")
+        } else {
+            self.timer?.invalidate()
+            self.waveLoadingIndicator.progressReload = 0
+
+            self.infoDiskLable.text = String("\(Luminous.System.Disk.usedSpace)/" + "\(Luminous.System.Disk.totalSpace)")
+
+        }
+    }
     func printDiskSpace()  {
         print("------------\nDisk\n------------")
         print("freeSpace: \(Luminous.System.Disk.freeSpace)")
