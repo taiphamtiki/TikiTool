@@ -14,7 +14,7 @@ import TTSegmentedControl
 import RxCocoa
 import RxSwift
 
-class DeeplinkViewController:UIViewController,UITableViewDelegate,UITableViewDataSource  {
+class DeeplinkViewController:UIViewController,BoxItemCellDelegate,UITableViewDelegate,UITableViewDataSource  {
     var deepLinkViewModel = DeeplinkViewModal()
     let disposeBag = DisposeBag()
 
@@ -46,11 +46,39 @@ class DeeplinkViewController:UIViewController,UITableViewDelegate,UITableViewDat
         cell.boxNameTitle.text = box.name
         let isHasSave = CoreDataHelper.shareInsstance.checkDeppLink(box: box)
         cell.favoritesBtn.isSelected = isHasSave
-        
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("xxxx")
+        tableView.deselectRow(at: indexPath, animated: true)
+        let box = self.deepLinkViewModel.boxs[indexPath.row]
+        
+        let alertViewController = UIAlertController.init(title: "Thông Báo", message: String("Bạn có muốn chuyển tới \(box.name) ?"), preferredStyle: UIAlertControllerStyle.alert)
+        alertViewController.addAction(UIAlertAction.init(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
+        }))
+        
+        alertViewController.addAction(UIAlertAction.init(title: "Yes", style: UIAlertActionStyle.cancel, handler: { (action) in
+            let urlBox = box.link
+            UIApplication.shared.open(URL.init(string: urlBox)!, options: [:], completionHandler: nil)
+        }))
+        
+        
+        self.present(alertViewController, animated: true, completion: nil)
+        
     }
+    
+    func didClickItem(box: BoxItemCell) {
+        let indexCell = self.tableView.indexPath(for: box)
+        let itemBox = self.deepLinkViewModel.boxs[(indexCell?.row)!]
+        let coreDataHelper = CoreDataHelper()
+        let isHasSave = CoreDataHelper.shareInsstance.checkDeppLink(box: itemBox)
+        if isHasSave == false {
+            coreDataHelper.Save(box: itemBox)
+        }
+        else {
+            coreDataHelper.removeDeepLink(box: itemBox)
+        }
+    }
+
 }

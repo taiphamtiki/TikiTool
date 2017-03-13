@@ -28,7 +28,7 @@ class DiskSpaceViewController: UIViewController {
         self.waveLoadingIndicator.progress = 0.5
         let value : Double = Double(Luminous.System.Disk.usedSpaceInBytes) * 100.0 / Double(Luminous.System.Disk.totalSpaceInBytes)
         self.waveLoadingIndicator.progress = ( value / 100.0)
-        self.infoDiskLable.text = String("\(Luminous.System.Disk.freeSpace)/" + "\(Luminous.System.Disk.totalSpace)")
+        self.infoDiskLable.text = String("\(Luminous.System.Disk.usedSpace)/" + "\(Luminous.System.Disk.totalSpace)")
     }
     
     @IBAction func actionClear(_ sender: Any) {
@@ -66,17 +66,11 @@ class DiskSpaceViewController: UIViewController {
         
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         FileManager.default.createFile(atPath: "\(documentsPath)/xfile.txt", contents: Data(), attributes: [:])
-        var success : Int32
-            success = truncate("\(documentsPath)/xfile.txt",Luminous.System.Disk.freeSpaceInBytes );
+            _ = truncate("\(documentsPath)/xfile.txt",Luminous.System.Disk.freeSpaceInBytes );
             print("-------------------After-----------------")
             printDiskSpace()
-        
-        let when = DispatchTime.now() + 5
-        DispatchQueue.main.asyncAfter(deadline: when, execute: {
-            try!        FileManager.default.removeItem(atPath: "\(documentsPath)/xfile.txt")
+            try! FileManager.default.removeItem(atPath: "\(documentsPath)/xfile.txt")
             self.printDiskSpace()
-
-        })
     }
     
 }

@@ -23,6 +23,7 @@ class LoveViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.loveViewModel.createListDBObssever().subscribe(onCompleted: {
             self.loveTableview.reloadData()
         }).addDisposableTo(DisposeBag())
+        self.loveTableview.tableFooterView = UIView()
         
     }
     override func viewDidAppear(_ animated: Bool) {

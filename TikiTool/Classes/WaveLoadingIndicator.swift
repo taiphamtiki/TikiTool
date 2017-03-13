@@ -214,7 +214,7 @@ class WaveLoadingIndicator: UIView {
         
         let style : NSMutableParagraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         style.alignment = NSTextAlignment.center
-        let progressText = (NSString(format: "%.0f", validProgress) as String) + "%" + "\nFree"
+        let progressText = (NSString(format: "%.0f", validProgress) as String) + "%" + "\nUsed"
         
         var attribute: [String : AnyObject]!
         if progress > 0.45 {
