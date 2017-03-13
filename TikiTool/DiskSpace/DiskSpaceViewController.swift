@@ -26,9 +26,9 @@ class DiskSpaceViewController: UIViewController {
         self.waveLoadingIndicator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.parentIndicator.addSubview(self.waveLoadingIndicator)
         self.waveLoadingIndicator.progress = 0.5
-        let value : Double = Double(Luminous.System.Disk.freeSpaceInBytes) * 100.0 / Double(Luminous.System.Disk.totalSpaceInBytes)
+        let value : Double = Double(Luminous.System.Disk.usedSpaceInBytes) * 100.0 / Double(Luminous.System.Disk.totalSpaceInBytes)
         self.waveLoadingIndicator.progress = ( value / 100.0)
-        self.infoDiskLable.text = String("\(Luminous.System.Disk.usedSpace)/" + "\(Luminous.System.Disk.totalSpace)")
+        self.infoDiskLable.text = String("\(Luminous.System.Disk.freeSpace)/" + "\(Luminous.System.Disk.totalSpace)")
     }
     
     @IBAction func actionClear(_ sender: Any) {

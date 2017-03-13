@@ -330,8 +330,8 @@
 				TargetAttributes = {
 					EE1D814C1E4969B500A61155 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = T67GE44MRY;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = UDFKVQ2VD3;
+						ProvisioningStyle = Manual;
 					};
 					EE1D81631E4969B500A61155 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -628,7 +628,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tai.pham@tiki.vn (WCU7766SG3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tai.pham@tiki.vn (WCU7766SG3)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -678,7 +679,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tai.pham@tiki.vn (WCU7766SG3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tai.pham@tiki.vn (WCU7766SG3)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -705,13 +707,16 @@
 			baseConfigurationReference = FFF7266F733E67B2A34E26AA /* Pods-TikiTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tai Pham (JC3T2BHTWX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = T67GE44MRY;
+				DEVELOPMENT_TEAM = UDFKVQ2VD3;
 				INFOPLIST_FILE = TikiTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuyenmonkey.TikiTala;
+				PRODUCT_BUNDLE_IDENTIFIER = tiki.vn.tikitool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "164a2fd6-fd2a-4bb3-905b-e3fcf47240fd";
+				PROVISIONING_PROFILE_SPECIFIER = TikiToolDev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -721,13 +726,16 @@
 			baseConfigurationReference = D68F95B60EC3C187066ED9BC /* Pods-TikiTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: tai.pham@tiki.vn (WCU7766SG3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = T67GE44MRY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TikiTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuyenmonkey.TikiTala;
+				PRODUCT_BUNDLE_IDENTIFIER = tiki.vn.tikitool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

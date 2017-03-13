@@ -50,4 +50,7 @@ class DeeplinkViewController:UIViewController,UITableViewDelegate,UITableViewDat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("xxxx")
+    }
 }

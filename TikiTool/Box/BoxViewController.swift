@@ -31,6 +31,7 @@ class BoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         self.boxViewModel.createListBoxObssever().subscribe(onCompleted: {
             self.boxTableView.reloadData()
         }).addDisposableTo(DisposeBag())
+        self.boxTableView.delegate = self
         self.setStatusBarStyle(UIStatusBarStyleContrast)
     }
     

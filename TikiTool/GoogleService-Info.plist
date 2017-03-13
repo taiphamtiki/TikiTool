@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>206442919818-63eiptr4fmckjottc30iabukb2p499e0.apps.googleusercontent.com</string>
+	<string>206442919818-789unt55e159gorii1ebg1n01ch7ttld.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.206442919818-63eiptr4fmckjottc30iabukb2p499e0</string>
+	<string>com.googleusercontent.apps.206442919818-789unt55e159gorii1ebg1n01ch7ttld</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCD_XJ-C2r_GCuTFXfygWhpTP2fRB7oXe0</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.tuyenmonkey.TikiTala</string>
+	<string>tiki.com.tikitool</string>
 	<key>PROJECT_ID</key>
 	<string>tiki-tala-afa00</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:206442919818:ios:a34f133470acc1e5</string>
+	<string>1:206442919818:ios:c997ccb2af5faa55</string>
 	<key>DATABASE_URL</key>
 	<string>https://tiki-tala-afa00.firebaseio.com</string>
 </dict>

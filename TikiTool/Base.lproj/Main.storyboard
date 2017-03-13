@@ -46,7 +46,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.086274509803921567" green="0.10980392156862745" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="jTS-6a-nSJ" id="ep9-Q4-cmX"/>
-                                    <outlet property="delegate" destination="jTS-6a-nSJ" id="QaL-hg-to4"/>
+                                    <outlet property="delegate" destination="jTS-6a-nSJ" id="qSw-Zs-l1X"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -58,7 +58,7 @@
                             <constraint firstItem="nq9-Di-pn8" firstAttribute="leading" secondItem="90v-aG-0Zn" secondAttribute="leading" id="Rdb-O8-3Ni"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="hiy-el-rUB"/>
+                    <tabBarItem key="tabBarItem" title="Box" image="icon_box" id="hiy-el-rUB"/>
                     <navigationItem key="navigationItem" title="Box" id="88d-b0-Wu3"/>
                     <connections>
                         <outlet property="boxTableView" destination="nq9-Di-pn8" id="a0T-cc-PKU"/>
@@ -92,7 +92,7 @@
         <scene sceneID="SEF-Bc-L7u">
             <objects>
                 <navigationController id="Mbf-g5-3wZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="DeepLink" id="hGs-VV-S5h"/>
+                    <tabBarItem key="tabBarItem" title="DeepLink" image="icon_deeplink" id="hGs-VV-S5h"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g7v-r4-tNa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -191,7 +191,7 @@
         <scene sceneID="oOf-4C-SGC">
             <objects>
                 <navigationController id="Orb-QZ-5pC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorite" id="aZE-30-FNp"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="icon_favorist" id="aZE-30-FNp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ju-l5-fGc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -208,7 +208,7 @@
         <scene sceneID="GT5-h9-c9D">
             <objects>
                 <navigationController id="HxM-oD-tyB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Junk" id="iJq-DF-bXb"/>
+                    <tabBarItem key="tabBarItem" title="Junk" image="icon_junk" id="iJq-DF-bXb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fna-0h-fiq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -260,9 +260,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-k9-Zfs">
                                 <rect key="frame" x="0.0" y="538" width="375" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIV-Qt-onq">
-                                        <rect key="frame" x="164" y="25" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIV-Qt-onq">
+                                        <rect key="frame" x="8" y="25" width="353" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="actionClear:" destination="UQa-3K-68z" eventType="touchUpInside" id="K7B-tB-19B"/>
@@ -270,6 +269,11 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.10588235294117647" green="0.12549019607843137" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AIV-Qt-onq" secondAttribute="trailing" constant="14" id="NtG-vk-Hza"/>
+                                    <constraint firstItem="AIV-Qt-onq" firstAttribute="leading" secondItem="AmH-k9-Zfs" secondAttribute="leading" constant="8" id="dJi-EK-pDV"/>
+                                    <constraint firstItem="AIV-Qt-onq" firstAttribute="centerY" secondItem="AmH-k9-Zfs" secondAttribute="centerY" id="l5C-KW-GsS"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -298,4 +302,10 @@
             <point key="canvasLocation" x="877.60000000000002" y="194.75262368815595"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_box" width="30" height="30"/>
+        <image name="icon_deeplink" width="30" height="30"/>
+        <image name="icon_favorist" width="30" height="30"/>
+        <image name="icon_junk" width="29" height="30"/>
+    </resources>
 </document>
